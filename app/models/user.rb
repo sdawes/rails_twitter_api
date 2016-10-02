@@ -11,15 +11,8 @@ class User < ApplicationRecord
     user
   end
 
-  # token and secret is what came back from omniauth and this was saved to the user database. 
+  # token and secret is what came back from omniauth and this was saved to the user database.
 
-  def twitter
-    @client ||= Twitter::REST::Client.new do |config|
-    config.consumer_key        = Rails.application.secrets.twitter_api_key
-    config.consumer_secret     = Rails.application.secrets.twitter_api_secret
-    config.access_token        = token
-    config.access_token_secret = secret
-end
-  end
+
 
 end
