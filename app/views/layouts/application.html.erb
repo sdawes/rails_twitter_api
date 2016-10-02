@@ -11,10 +11,14 @@
   </head>
 
   <body>
-    <%= link_to "Sign in with Twitter", "/auth/twitter" %>
+    <!-- <%= link_to "Sign in with Twitter", "/auth/twitter" %> -->
     <% if current_user %>
       <p>Signed in as <%= current_user.name %></p>
+      <%= link_to "Sign_out", signout_path %>
+    <% else %>
+      <%= link_to "Sign in with Twitter", "/auth/twitter" %>
     <% end %>
+
     <%= yield %>
   </body>
 </html>
