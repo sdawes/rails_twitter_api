@@ -5,9 +5,9 @@ class User < ApplicationRecord
     user.update(
       name: auth_hash.info.name,
       profile_image: auth_hash.info.image,
+      twitter_user_name: auth_hash.info.nickname,
       token: auth_hash.credentials.token,
-      secret: auth_hash.credentials.secret,
-      twitter_user_name: auth_hash.info.nickname
+      secret: auth_hash.credentials.secret
     )
     user
   end
