@@ -12,7 +12,7 @@
 
     <div class="twitter_list">
       <p id="list_title">Followers of <%= current_user.name %>:</p>
-      <% twitter_client.followers("stephenrdawes").each do |follower| %>
+      <% twitter_client.followers(current_user.twitter_user_name).each do |follower| %>
         <p><%= follower.name %></p>
         <hr>
       <% end %>

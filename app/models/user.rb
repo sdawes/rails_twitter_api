@@ -6,7 +6,8 @@ class User < ApplicationRecord
       name: auth_hash.info.name,
       profile_image: auth_hash.info.image,
       token: auth_hash.credentials.token,
-      secret: auth_hash.credentials.secret
+      secret: auth_hash.credentials.secret,
+      twitter_user_name: auth_hash.info.nickname
     )
     user
   end
