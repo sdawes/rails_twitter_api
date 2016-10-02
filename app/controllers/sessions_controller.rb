@@ -1,6 +1,8 @@
 class SessionsController < ApplicationController
   def create
-    @user = User.find_or_create_from_auth_hash(auth_hash)
+    # complete omniauth authentication and crate user record in database
+    # raise env["omniauth.auth"].to_yaml
+    @user = User.from_omniauth(auth_hash)
     session[:user_id] = @user.id
     redirect_to root_path
   end
