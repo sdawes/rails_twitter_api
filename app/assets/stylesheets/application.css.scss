@@ -72,43 +72,10 @@ p, ul, ol {
 
 hr {
   width: 3em;
-  display: block;
   height: 2px;
   border: 0;
   border-top: 2px solid $highlight;
-  margin: 2rem 0;
-}
-
-#main_navigation {
-  background: image-url('nav_background.jpg') no-repeat;
-  background-size: cover;
-  padding: 2.5em 5%;
-  border-bottom: 1px solid $border;
-  .name {
-    font-weight: 700;
-    font-size: 0.8em;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    border: 2px solid white;
-    padding: 1rem;
-    text-decoration: none;
-    color: $dark;
-    float: left;
-  }
-}
-
-nav {
-  float: right;
-  padding-top: 0.9rem;
-  a {
-    color: $dark;
-    text-decoration: none;
-    margin: 0 .2em;
-    font-size: 1rem;
-    &:hover {
-      color: $highlight;
-    }
-  }
+  margin: 0 auto;
 }
 
 .fa {
@@ -117,92 +84,67 @@ nav {
   color: $highlight;
 }
 
-#page_title {
+.wrapper {
   font-weight: 700;
   text-align: center;
   border-bottom: 1px solid $border;
   padding: 2em 0;
   font-size: 1rem;
   text-transform: uppercase;
+  width: 80%;
+  margin: 0 auto;
 }
 
-#main_footer {
-  padding: 2.5em 5%;
-  border-top: 1px solid $border;
-  .copyright {
-    float: left;
-    font-size: 0.9em;
-    margin: 0;
-  }
-  nav {
-    float: right;
-    i {
+.date {
+  font-size: .5em;
+  margin: 2em;
+  color: $light;
+  text-transform: none;
+  font-weight: normal;
+  font-style: italic;
+}
+
+#sign_in_wrapper {
+
+    span {
+      color: darkred;
+    }
+
+    #sign_in {
+    }
+
+    #sign_out {
+      text-decoration: none;
       color: $dark;
-      margin-left: 1em;
-      padding-top: .2em;
       &:hover {
-        color: $highlight;
+        background-color: $highlight;
+        color: white;
       }
     }
+
+    .profile_image {
+      margin-bottom: 1em;
+    }
+}
+
+.twitter_list {
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+  margin-top: 2em;
+  padding: 2em 0;
+  p {
+    color: $light;
+    padding: 0 0 1em 0;
+    margin: 0;
+  }
+  #list_title {
+    color: darkred;
+  }
+  hr {
+    padding: 0 0 1em 0;
+    margin: 0 auto;
   }
 }
 
-.wrapper {
-  width: 90%;
-  margin: 0 auto;
-}
-
-.skinny_wrapper {
-
-  width: 80%;
-  max-width: 760px;
-  margin: 0 auto;
-}
-
-.wrapper_padding {
-  padding: 2rem 0;
-}
-
-// ================= INPUTS =================
-
-input[type="text"], input[type="email"], input[type="password"], textarea {
-  width: 100%;
-  max-width: 100%;
-  height: 3em;
-  border: 2px solid $border;
-  padding: 1em;
-  margin: .5em 0 2em 0;
-}
-
-textarea {
-  min-height: 20em;
-}
-
-input[type="submit"], .button {
-  outline: none;
-  background: none;
-  border: 2px solid $border;
-  text-align: center;
-  font-size: 1em;
-  color: $dark;
-  text-decoration: none;
-  padding: 1em 2em;
-  &:hover {
-    border: 2px solid $highlight;
-    color: $highlight;
-  }
-}
-
-.project_button {
-  background: $highlight;
-  color: white;
-  text-decoration: none;
-  padding: 1em 2em;
-}
-
-.button_wrapper {
-  margin: 4em 0 0 0;
-  text-align: center;
-}
 
 @import "welcome.css.scss";
