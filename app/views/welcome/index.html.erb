@@ -1,5 +1,5 @@
 <div class="wrapper">
-  <h1>COHERENT.WORK TECH CHALLENGE</h1>
+  <h1>OMNIAUTH AND TWITTER API</h1>
 
   <!-- <%= link_to "Sign in with Twitter", "/auth/twitter" %> -->
   <% if current_user %>
@@ -9,13 +9,7 @@
       <p><%= link_to "Sign out", signout_path, id: "sign_out" %></p>
     </div>
 
-    <div class="twitter_list">
-      <p id="list_title">Followers of <%= current_user.name %>:</p>
-      <% twitter_client.followers(current_user.twitter_user_name).each do |follower| %>
-        <p><%= follower.name %></p>
-        <hr>
-      <% end %>
-    </div>
+
 
   <% else %>
 
