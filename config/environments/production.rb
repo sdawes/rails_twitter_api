@@ -84,5 +84,5 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.autoload_paths << Rails.root.join('lib')
+  config.autoload_paths += %W{#{config.root}/lib}
 end
