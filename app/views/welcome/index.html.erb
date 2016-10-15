@@ -9,14 +9,24 @@
       <p><%= link_to "Sign out", signout_path, id: "sign_out" %></p>
     </div>
 
-    <div class="twitter_list">
-          <p id="list_title">Followers of <%= current_user.name %>:</p>
-          <% twitter_client.followers(current_user.twitter_user_name).each do |follower| %>
-            <p><%= follower.name %></p>
-            <hr>
-          <% end %>
+    <div class="public_tweets">
+      <p>Latest tweet from <%= current_user.name %>:</p>
+      <% @twitter_api.our_public_tweets.each do |tweet| %>
+        <% cache('our_public_tweets', expires_in: 6.hours) do %>
+          <%= parsed_tweet(tweet) %>
+        <% end %>
+      <% end %>
     </div>
 
+    <ul class="followers">
+      <p>First 20 followers for <%= current_user.name %>:</p>
+      <% @twitter_api.followers.each do |follower| %>
+        <% cache('followers', expires_in: 6.hours) do %>
+          <li><%= follower.name %></li>
+          <hr>
+        <% end %>
+      <% end %>
+    </ul>
 
   <% else %>
 

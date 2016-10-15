@@ -10,6 +10,7 @@ $border: #E9E9E9;
 }
 
 body {
+  // border: 1px solid yellow;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -71,11 +72,12 @@ p, ul, ol {
 }
 
 hr {
-  width: 3em;
-  height: 2px;
+  width: 30%;
+  display: block;
+  height: 1px;
   border: 0;
-  border-top: 2px solid $highlight;
-  margin: 0 auto;
+  border-top: 1px solid $light;
+  margin: 1rem auto;
 }
 
 .fa {
@@ -124,6 +126,8 @@ hr {
 
     .profile_image {
       margin-bottom: 1em;
+      border: 1px solid lightgrey;
+      border-radius: 15px;
     }
 }
 

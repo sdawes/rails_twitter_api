@@ -13,7 +13,4 @@ class User < ApplicationRecord
   end
 
   # token and secret is what came back from omniauth and this was saved to the user database.
-
-
-
 end

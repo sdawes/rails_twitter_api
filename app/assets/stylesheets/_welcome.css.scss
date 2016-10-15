@@ -1,3 +1,24 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.public_tweets {
+  border: 1px solid $light;
+  border-radius: 15px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem;
+  margin-bottom: 2em;
+  background-color: $white;
+}
+
+ul {
+  // border: 1px solid green;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  li {
+    // border: 1px solid pink;
+    color: darkred;
+  }
+}
