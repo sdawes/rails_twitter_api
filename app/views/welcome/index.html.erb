@@ -11,8 +11,8 @@
 
     <div class="public_tweets">
       <p>Latest tweet from <%= current_user.name %>:</p>
-      <% @twitter_api.our_public_tweets.each do |tweet| %>
-        <% cache('our_public_tweets', expires_in: 6.hours) do %>
+      <% cache('our_public_tweets', expires_in: 6.hours) do %>
+        <% @twitter_api.our_public_tweets.each do |tweet| %>
           <%= parsed_tweet(tweet) %>
         <% end %>
       <% end %>
@@ -20,8 +20,8 @@
 
     <ul class="followers">
       <p>First 20 followers for <%= current_user.name %>:</p>
-      <% @twitter_api.followers.each do |follower| %>
-        <% cache('followers', expires_in: 6.hours) do %>
+      <% cache('followers', expires_in: 6.hours) do %>
+        <% @twitter_api.followers.each do |follower| %>
           <li><%= follower.name %></li>
           <hr>
         <% end %>
